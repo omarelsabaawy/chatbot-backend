@@ -1,0 +1,361 @@
+{
+     "intents": [
+           {
+                 "tag": "Greeting",
+                 "patterns": [
+                       "Hi",
+                       "Hi there",
+                       "Hola",
+                       "Hello",
+                       "Hello there",
+                       "Hya",
+                       "Hya there"
+                 ],
+                 "responses": [
+                       "Hello, how are you doing?",
+                       "Hi, how are you doing?",
+                       "Greeting, how are you doing?"
+                 ],
+                 "extension":  {
+                       "function": "",
+                       "entities": false,
+                       "responses": []
+                 },
+                 "context":  {
+                       "in": "",
+                       "out": "GreetingUserRequest",
+                       "clear": false
+                 },
+                 "entityType": "NA",
+                 "entities": []
+           },
+           {
+                 "tag": "GreetingResponse",
+                 "patterns": [
+                       "My user is Omar",
+                       "This is Omar",
+                       "I am Omar",
+                       "It is Omar",
+                       "My user is Bella",
+                       "This is Bella",
+                       "I am Bella",
+                       "It is Bella"
+                 ],
+                 "responses": [
+                       "Great! Hi <HUMAN>! How can I help?",
+                       "Good! Hi <HUMAN>, how can I help you?",
+                       "Cool! Hello <HUMAN>, what can I do for you?",
+                       "OK! Hola <HUMAN>, how can I help you?",
+                       "OK! hi <HUMAN>, what can I do for you?"
+                 ],
+                 "extension":  {
+                       "function": "extensions.gHumans.updateHuman",
+                       "entities": true,
+                       "responses": [
+                             "Hi %%HUMAN%%! How can I help?",
+                             "Hi %%HUMAN%%, how can I help you?",
+                             "Hello %%HUMAN%%, what can I do for you?",
+                             "Hola %%HUMAN%%, how can I help you?",
+                             "OK hi %%HUMAN%%, what can I do for you?"
+                       ]
+                 },
+                 "context":  {
+                       "in": "GreetingUserRequest",
+                       "out": "",
+                       "clear": true
+                 },
+                 "entityType": "NA",
+                 "entities": [
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 3,
+                             "rangeTo": 4
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 2,
+                             "rangeTo": 3
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 1,
+                             "rangeTo": 2
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 2,
+                             "rangeTo": 3
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 3,
+                             "rangeTo": 4
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 2,
+                             "rangeTo": 3
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 1,
+                             "rangeTo": 2
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 2,
+                             "rangeTo": 3
+                       }
+                 ]
+           },
+           {
+                 "tag": "CourtesyGreeting",
+                 "patterns": [
+                       "How are you?",
+                       "how are you?",
+                       "how are you?",
+                       "how are you?",
+                       "How are you doing?",
+                       "Hope you are doing well?",
+                       "hope you are doing well?"
+                 ],
+                 "responses": [
+                       "I am great, how are you?",
+                       "how are you? I am great thanks!",
+                       "I am good thank you, how are you?",
+                       "I am great Thanks, how are you?",
+                       "I am good thank you, how are you?",
+                       "good thank you, how are you?"
+                 ],
+                 "extension":  {
+                       "function": "",
+                       "entities": false,
+                       "responses": []
+                 },
+                 "context":  {
+                       "in": "",
+                       "out": "CourtesyGreetingUserRequest",
+                       "clear": true
+                 },
+                 "entityType": "NA",
+                 "entities": []
+           },
+           {
+                 "tag": "CourtesyGreetingResponse",
+                 "patterns": [
+                       "Good thanks! My user is Adam",
+                       "Good thanks! This is Adam",
+                       "Good thanks! I am Adam",
+                       "Good thanks! It is Adam",
+                       "Great thanks! My user is Bella",
+                       "Great thanks! This is Bella",
+                       "Great thanks! I am Bella",
+                       "Great thanks! It is Bella"
+                 ],
+                 "responses": [
+                       "Great! Hi <HUMAN>! How can I help?",
+                       "Good! Hi <HUMAN>, how can I help you?",
+                       "Cool! Hello <HUMAN>, what can I do for you?",
+                       "OK! Hola <HUMAN>, how can I help you?",
+                       "OK! hi <HUMAN>, what can I do for you?"
+                 ],
+                 "extension":  {
+                       "function": "extensions.gHumans.updateHuman",
+                       "entities": true,
+                       "responses": [
+                             "Great %%HUMAN%%! How can I help?",
+                             "Good %%HUMAN%%, how can I help you?",
+                             "Cool %%HUMAN%%, what can I do for you?",
+                             "OK %%HUMAN%%, how can I help you?",
+                             "OK hi %%HUMAN%%, what can I do for you?"
+                       ]
+                 },
+                 "context":  {
+                       "in": "GreetingUserRequest",
+                       "out": "",
+                       "clear": true
+                 },
+                 "entityType": "NA",
+                 "entities": [
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 5,
+                             "rangeTo": 6
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 4,
+                             "rangeTo": 5
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 3,
+                             "rangeTo": 4
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 4,
+                             "rangeTo": 5
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 5,
+                             "rangeTo": 6
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 4,
+                             "rangeTo": 5
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 3,
+                             "rangeTo": 4
+                       },
+                       {
+                             "entity": "HUMAN",
+                             "rangeFrom": 3,
+                             "rangeTo": 4
+                       }
+                 ]
+           },
+           {
+                 "tag": "Thanks",
+                 "patterns": [
+                       "OK thank you",
+                       "OK thanks",
+                       "OK",
+                       "Thanks",
+                       "Thank you",
+                       "That's helpful"
+                 ],
+                 "responses": [
+                       "No problem!",
+                       "Happy to help!",
+                       "Any time!",
+                       "My pleasure"
+                 ],
+                 "extension":  {
+                       "function": "",
+                       "entities": false,
+                       "responses": []
+                 },
+                 "context":  {
+                       "in": "",
+                       "out": "",
+                       "clear": false
+                 },
+                 "entityType": "NA",
+                 "entities": []
+           },
+           {
+                 "tag": "GoodBye",
+                 "patterns": [
+                       "Bye",
+                       "Adios",
+                       "See you later",
+                       "Goodbye"
+                 ],
+                 "responses": [
+                       "See you later",
+                       "Have a nice day",
+                       "Bye! Come back again soon."
+                 ],
+                 "extension":  {
+                       "function": "",
+                       "entities": false,
+                       "responses": []
+                 },
+                 "context":  {
+                       "in": "",
+                       "out": "",
+                       "clear": false
+                 },
+                 "entityType": "NA",
+                 "entities": []
+           },
+           {
+                 "tag": "CourtesyGoodBye",
+                 "patterns": [
+                       "Thanks, bye",
+                       "Thanks for the help, goodbye",
+                       "Thank you, bye",
+                       "Thank you, goodbye",
+                       "Thanks goodbye",
+                       "Thanks good bye"
+                 ],
+                 "responses": [
+                       "No problem, goodbye",
+                       "Not a problem! Have a nice day",
+                       "Bye! Come back again soon."
+                 ],
+                 "extension":  {
+                       "function": "",
+                       "entities": false,
+                       "responses": []
+                 },
+                 "context":  {
+                       "in": "",
+                       "out": "",
+                       "clear": false
+                 },
+                 "entityType": "NA",
+                 "entities": []
+           },
+           {"tag": "swapha",
+                 "patterns": [
+                       "What is swapha?",
+                       "what is swap.it?",
+                       "what is swap it?",
+                       "what?",
+                       "why swapha?",
+                       "why?",
+                       "why to use it?",
+                       "swap.it?",
+                       "swap it?",
+                       "swapha?",
+                       "what is it used for?"
+                 ],
+                 "responses": [
+                       "Swap.it is an online platform, where you can swap items you don't need with ones you need, with people in your neighborhood."
+                 ]
+           },
+           {"tag": "SwaphaHelp",
+                 "patterns": [
+                       "how",
+                       "how to",
+                       "how to use",
+                       "how to use it",
+                       "how to use swap.it",
+                       "how to use swapha",
+                       "i need help",
+                       "help",
+                       "any one can help me here",
+                       "can you help me",
+                       "please help",
+                       "?",
+                       " "
+                 ],
+                 "responses": [
+                       "By filling your lists swap and wishlist, swap.it will choose for you the best people you can swap your items with."
+                 ]
+           },
+           {"tag": "SwaphaWishList",
+                 "patterns": [
+                       "how to fill wish list",
+                       "how to fill wishlist",
+                       "how to fill swaplist",
+                       "how to fill swap list",
+                       "how to fill wish list",
+                       "how to fill the lists",
+                       "how to fill it",
+                       "how to add in it",
+                       "how to add in wish list",
+                       "how to add"
+                 ],
+                 "responses": [
+                       "From the top right corner, you will find the heart button where it is the wish list, you can then add your products from after searching for them."
+                 ]
+           }
+     ]
+}
